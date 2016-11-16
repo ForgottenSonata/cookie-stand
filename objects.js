@@ -10,7 +10,7 @@ function renderHeaderRow() {
 
   tableRow.appendChild(blankTableHeader);
 
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < storeHours.length; i++) {
     hourlyTableHeader = document.createElement('th');
     hourlyTableHeader.textContent = hours[i];
     tableRow.appendChild(hourlyTableHeader);
@@ -19,12 +19,9 @@ function renderHeaderRow() {
   totalTableHeader.textContent = 'Total';
   tableRow.appendChild(totalTableHeader);
   storeTable.appendChild(tableRow);
-
-//end of renderHeaderRow
 };
 
-
-function CookieStore (name, mincustomers, maxcustomers, avgcookies) {
+function CookieStore (name, minCustomers, maxCustomers, avgCookies) {
 
   this.name = name;
   this.minCustomers = minCustomers;
@@ -62,15 +59,16 @@ CookieStore.prototype.randomCustomerhr= function(){
          this.salesPerHour.push(dailyCookieCount);
        };
      }
-          //tohtmlfunction() {
-          this. cookiesPerDay();
+          //tohtmlfunction() {}
+          this.cookiesPerDay() {
+
+          };
 
           var unorderedList = document.createElement('ul');
           var storeNameListItem = document.createElement('li');
           var totalListItem = document.createElement('li');
           var hourlyListItem;
           var hourMessage;
-
 
           storeNameListItem.textContent = this.name;
           unorderedList.appendChild(storeNameListItem);
