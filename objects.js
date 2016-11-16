@@ -4,9 +4,7 @@ function renderHeaderRow() {
   var tableRow = document.createElement('tr');
   var blankTableHeader = document.createElement('th');
   var totalTableHeader = document.createElement('th');
-  blankTableHeader.innerHTML = '<th>Store Name \&dArr; || Store Hours \&rArr;</th>';
 
-  var hourlyTableHeader;
 
   tableRow.appendChild(blankTableHeader);
 
