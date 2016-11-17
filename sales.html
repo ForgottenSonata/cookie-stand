@@ -1,48 +1,26 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <main id="content_area"></main>
-    <h1>Salmon Cookies Sale Across Seattle</h1>
-    <table id = "store_table"
-      <thead>
-        <tr>
-          <th></th>
-          <th>9am</th>
-          <th>10am</th>
-          <th>11am</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-          <tr>
-          <th>Pike</th>
-          <td>37</td>
-          <td>50</td>
-          <td>22</td>
-          <td>109</td>
-        </tr>
-        <tr>
-          <th>Seatac</th>
-        </tr>
-        <tr>
-          <th>SeattleCommunity</th>
-        </tr>
-        <tr></tr>
-      </table>
-         <form id="new_store">
-           <input type="reset">
-       <input type="text" id="user_store" placeholder="storeName" name="user_store">
-
-            <input type = "submit" id = "submitButton" placeholder= "Enter your store" name="submit">
-            </form>
-         <section id ="form_printer">
-         </section>
-
-
-
-<script type="text/javascript" src="objects.js"></script>
-
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <table id='store_table'>
+    <thead id='table_header'>
+    </thead>
+    <tbody id='table_body'>
+    </tbody>
+    <tfoot id='table_footer'>
+    </tfoot>
+  </table>
+  <form id='store_form'>
+    <input type="text" placeholder="Store Name" name="store_name">
+    <input type="number" placeholder="Minimum Customers per Hour" name="min_cust">
+    <input type="number" placeholder="Maximum Customers per Hour" name="max_cust">
+    <input type="number" placeholder="Average Cookies per Customer" name="avg_cookies">
+    <input type="submit">
+  </form>
+  <script src='objects.js'></script>
 </body>
 </html>
