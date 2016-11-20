@@ -1,0 +1,60 @@
+* {
+  font-family: Cursive;
+
+}
+
+header {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+header nav ul {
+  margin: 0 auto;
+}
+
+nav ul li{
+  margin: 0 auto;
+  float: left;
+  list-style-type: none;
+  background-color: white;
+  text: black;
+  padding: 15px;
+  border: solid, red;
+  border-radius: 10px;
+}
+
+main{
+  font-family: s
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+
+
+h1{
+  font- family: Helvetica
+  text-align: center;
+}
+.featured_banner {
+  display: inline-block;
+  position: relative
+
+
+
+footer {
+  background-color: #;
+  padding: 10px;
+  text-align: center;
+  color:
+  font-family: ;
+  letter-spacing:
+  margin: 0 auto;
+}
