@@ -56,13 +56,11 @@ function totalSalesPerHour() {
 var storeForm = document.getElementById('store_form');
 
 storeForm.addEventListener('submit', handleSubmit);
-//DOM node.method('event name', higher order function)
+
 
 function handleSubmit(event) {
   event.preventDefault();
   var storeName = event.target.store_name.value;
-  //event.target = node that fired off this event
-  //by naming input
   var minHourlyCustomers = parseInt(event.target.min_cust.value);
   var maxHourlyCustomers = parseInt(event.target.max_cust.value);
   var avgCookiesPerCustomer = parseInt(event.target.avg_cookies.value);
@@ -89,9 +87,9 @@ function renderHeaderRow () {
   tableRow.appendChild(blankTableHeader);
 
   for (var i = 0; i < storeHours.length; i++) {
-    hourlyTableHeader = document.createElement('th');//create element
-    hourlyTableHeader.textContent = storeHours[i];//update content
-    tableRow.appendChild(hourlyTableHeader);//put it somewhere
+    hourlyTableHeader = document.createElement('th');
+    hourlyTableHeader.textContent = storeHours[i];
+    tableRow.appendChild(hourlyTableHeader);
   }
 
   totalTableHeader.textContent = 'Daily Location Total';
@@ -116,7 +114,7 @@ CookieStore.prototype.toHtml = function (){
 
   for (var i = 0; i < storeHours.length; i++) {
     hourlyTableData = document.createElement('td');
-    hourlyTableData.textContent = this.cookieArray[i]; //use random numbers generated
+    hourlyTableData.textContent = this.cookieArray[i]; // random numbers generated
     tableRow.appendChild(hourlyTableData);
   }
 
@@ -138,9 +136,9 @@ function renderFooterRow(){
   tableRow.appendChild(totalTableFooter);
 
   for (var i = 0; i < storeHours.length; i++) {
-    hourlyTableFooter = document.createElement('td');//create element
-    hourlyTableFooter.textContent = totalSalesArray[i];//update content
-    tableRow.appendChild(hourlyTableFooter);//put it somewhere
+    hourlyTableFooter = document.createElement('td');
+    hourlyTableFooter.textContent = totalSalesArray[i];
+    tableRow.appendChild(hourlyTableFooter);
   }
 
   grandTotalTableFooter.textContent = 'ALL TOTAL';
@@ -167,56 +165,17 @@ stores.push(capitolHill);
 
 var alki = new CookieStore('Alki', 2, 16, 4.6);
 console.log(alki);
-
-//need to loop over stores array to call html
-//need to call loop to html at event
-
-// function renderTable() {
-//   for (var i = 0; i < stores.length; i++) {
-//     stores[i].toHtml()
-//     stores.push(stores[i]);
-//   }
-// }
-
-pike.toHtml();
 stores.push(alki);
 
-// console.log('randomHourlyCustomers: ' + pike.randomHourlyCustomers());
-// console.log('cookiesPurchasedHourly: ' + pike.cookiesPurchasedHourly());
-// console.log('totalSalesPerLocation: ' + pike.totalSalesPerLocation());
-// console.log('cookieArray: ' + pike.cookieArray);
-//console.log('cookieArray: ' + pike.cookieArray[]);
 
+pike.toHtml();
 seaTacAirport.toHtml();
-
-// console.log('randomHourlyCustomers: ' + seaTacAirport.randomHourlyCustomers());
-// console.log('cookiesPurchasedHourly: ' + seaTacAirport.cookiesPurchasedHourly());
-// console.log('totalSalesPerLocation: ' + seaTacAirport.totalSalesPerLocation());
-// console.log('cookieArray: ' + seaTacAirport.cookieArray);
-
 seattleCenter.toHtml();
-
-// console.log('randomHourlyCustomers: ' + seattleCenter.randomHourlyCustomers());
-// console.log('cookiesPurchasedHourly: ' + seattleCenter.cookiesPurchasedHourly());
-// console.log('totalSalesPerLocation: ' + seattleCenter.totalSalesPerLocation());
-// console.log('cookieArray: ' + seattleCenter.cookieArray);
-
 capitolHill.toHtml();
-
-// console.log('randomHourlyCustomers: ' + capitolHill.randomHourlyCustomers());
-// console.log('cookiesPurchasedHourly: ' + capitolHill.cookiesPurchasedHourly());
-// console.log('totalSalesPerLocation: ' + capitolHill.totalSalesPerLocation());
-// console.log('cookieArray: ' + capitolHill.cookieArray);
-
 alki.toHtml();
 
-// console.log('randomHourlyCustomers: ' + alki.randomHourlyCustomers());
-// console.log('cookiesPurchasedHourly: ' + alki.cookiesPurchasedHourly());
-// console.log('totalSalesPerLocation: ' + alki.totalSalesPerLocation());
-// console.log('cookieArray: ' + alki.cookieArray);
 
 totalSalesPerHour();
 
 renderFooterRow();
 console.dir('stores: ' + stores);
-console.log(pike)
