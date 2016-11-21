@@ -1,10 +1,6 @@
-* {
-  font-family: Cursive;
-
-}
 
 header {
-  background-color: black;
+  font-family: Cursive;
   padding: 10px;
   text-align: center;
 }
@@ -15,46 +11,22 @@ nav {
   display: inline-block;
 }
 
-header nav ul {
-  margin: 0 auto;
+main {
+display: inline-block;
+
 }
-
-nav ul li{
-  margin: 0 auto;
-  float: left;
-  list-style-type: none;
-  background-color: white;
-  text: black;
-  padding: 15px;
-  border: solid, red;
-  border-radius: 10px;
-}
-
-main{
-  font-family: s
-  width: 960px;
-  margin: 0 auto;
-}
-
-
 
 
 h1{
-  font- family: Helvetica
-  text-align: center;
+  font- family: Arial;
+  font-size: 50px;
 }
-.featured_banner {
-  display: inline-block;
-  position: relative
 
-
-
-footer {
-  background-color: #;
-  padding: 10px;
-  text-align: center;
-  color:
-  font-family: ;
-  letter-spacing:
-  margin: 0 auto;
+ul {
+  font-family: Arial;
+   font-size: 30px;
+margin: 0 auto;
+ float: left;
+ text: red;
+ border: solid black;
 }
