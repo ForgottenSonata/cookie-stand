@@ -56,11 +56,20 @@ function totalSalesPerHour() {
 var storeForm = document.getElementById('store_form');
 
 storeForm.addEventListener('submit', handleSubmit);
+<<<<<<< HEAD
 
+=======
+//DOM node.method('event name', higher order function)
+>>>>>>> Thursday-addingCSS
 
 function handleSubmit(event) {
   event.preventDefault();
   var storeName = event.target.store_name.value;
+<<<<<<< HEAD
+=======
+  //event.target = node that fired off this event
+  //by naming input
+>>>>>>> Thursday-addingCSS
   var minHourlyCustomers = parseInt(event.target.min_cust.value);
   var maxHourlyCustomers = parseInt(event.target.max_cust.value);
   var avgCookiesPerCustomer = parseInt(event.target.avg_cookies.value);
@@ -87,9 +96,15 @@ function renderHeaderRow () {
   tableRow.appendChild(blankTableHeader);
 
   for (var i = 0; i < storeHours.length; i++) {
+<<<<<<< HEAD
     hourlyTableHeader = document.createElement('th');
     hourlyTableHeader.textContent = storeHours[i];
     tableRow.appendChild(hourlyTableHeader);
+=======
+    hourlyTableHeader = document.createElement('th');//create element
+    hourlyTableHeader.textContent = storeHours[i];//update content
+    tableRow.appendChild(hourlyTableHeader);//put it somewhere
+>>>>>>> Thursday-addingCSS
   }
 
   totalTableHeader.textContent = 'Daily Location Total';
@@ -114,7 +129,11 @@ CookieStore.prototype.toHtml = function (){
 
   for (var i = 0; i < storeHours.length; i++) {
     hourlyTableData = document.createElement('td');
+<<<<<<< HEAD
     hourlyTableData.textContent = this.cookieArray[i]; // random numbers generated
+=======
+    hourlyTableData.textContent = this.cookieArray[i]; //use random numbers generated
+>>>>>>> Thursday-addingCSS
     tableRow.appendChild(hourlyTableData);
   }
 
@@ -136,9 +155,15 @@ function renderFooterRow(){
   tableRow.appendChild(totalTableFooter);
 
   for (var i = 0; i < storeHours.length; i++) {
+<<<<<<< HEAD
     hourlyTableFooter = document.createElement('td');
     hourlyTableFooter.textContent = totalSalesArray[i];
     tableRow.appendChild(hourlyTableFooter);
+=======
+    hourlyTableFooter = document.createElement('td');//create element
+    hourlyTableFooter.textContent = totalSalesArray[i];//update content
+    tableRow.appendChild(hourlyTableFooter);//put it somewhere
+>>>>>>> Thursday-addingCSS
   }
 
   grandTotalTableFooter.textContent = 'ALL TOTAL';
@@ -165,17 +190,30 @@ stores.push(capitolHill);
 
 var alki = new CookieStore('Alki', 2, 16, 4.6);
 console.log(alki);
+<<<<<<< HEAD
 stores.push(alki);
 
 
 pike.toHtml();
+=======
+
+pike.toHtml();
+stores.push(alki);
+>>>>>>> Thursday-addingCSS
 seaTacAirport.toHtml();
 seattleCenter.toHtml();
 capitolHill.toHtml();
 alki.toHtml();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Thursday-addingCSS
 totalSalesPerHour();
 
 renderFooterRow();
 console.dir('stores: ' + stores);
+<<<<<<< HEAD
+=======
+console.log(pike);
+>>>>>>> Thursday-addingCSS
