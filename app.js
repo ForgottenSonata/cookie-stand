@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+use strict';
+
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var cookiesByHour = [];
+
+
+=======
 'use strict';
 
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var stores = [];
 var totalSalesArray = [];
+>>>>>>> master
 
 function CookieStore(storeName, minHourlyCustomers, maxHourlyCustomers, avgCookiesPerCustomer) {
   this.storeName = storeName;
@@ -29,6 +38,18 @@ CookieStore.prototype.cookiesPurchasedHourly = function() {
 };
 
 CookieStore.prototype.totalSalesPerLocation = function() {
+<<<<<<< HEAD
+  for (var i = 0; i < storeHours.length; i++) {
+    var randomCookies = this.cookiesPurchasedHourly();
+    this.cookieArray[i] = randomCookies;
+    this.total += randomCookies;
+    cookiesByHour[i] += randomCookies;
+  };
+  return this.total;
+};
+
+
+=======
   var randomCookies;
   for (var i = 0; i < storeHours.length; i++) {
     randomCookies = this.cookiesPurchasedHourly();
@@ -85,6 +106,7 @@ function handleSubmit(event) {
   event.target.avg_cookies.value = '';
 
 }
+>>>>>>> master
 
 function renderHeaderRow () {
   var storeTable = document.getElementById('store_table');
@@ -96,6 +118,39 @@ function renderHeaderRow () {
   tableRow.appendChild(blankTableHeader);
 
   for (var i = 0; i < storeHours.length; i++) {
+<<<<<<< HEAD
+    hourlyTableHeader = document.createElement('th');//create element
+    hourlyTableHeader.textContent = storeHours[i];//update content
+    tableRow.appendChild(hourlyTableHeader);//put it somewhere
+  }
+
+  totalTableHeader.textContent = 'Daily Location Total';
+  tableRow.appendChild(totalTableHeader);
+
+  storeTable.appendChild(tableRow);
+}
+
+renderHeaderRow();
+
+CookieStore.prototype.toHtml = function (){
+  this.totalSalesPerLocation();
+  var storeTable = document.getElementById('store_table');
+  var tableRow = document.createElement('tr');
+  var nameTableHeader = document.createElement('th');
+  var totalTableData = document.createElement('td');
+  totalTableData.setAttribute('class', 'totalCell');
+  var hourlyTableData;
+
+  nameTableHeader.textContent = this.storeName;
+  tableRow.appendChild(nameTableHeader);
+
+  for (var i = 0; i < storeHours.length; i++) {
+    hourlyTableData = document.createElement('td');
+    hourlyTableData.textContent = this.cookieArray[i]; //use random numbers generated
+    tableRow.appendChild(hourlyTableData);
+  }
+
+=======
 <<<<<<< HEAD
     hourlyTableHeader = document.createElement('th');
     hourlyTableHeader.textContent = storeHours[i];
@@ -137,10 +192,28 @@ CookieStore.prototype.toHtml = function (){
     tableRow.appendChild(hourlyTableData);
   }
 
+>>>>>>> master
   totalTableData.textContent = this.total;
   tableRow.appendChild(totalTableData);
 
   storeTable.appendChild(tableRow);
+<<<<<<< HEAD
+};
+
+
+
+var pike = new CookieStore('1st and Pike', 23, 65, 6.3);
+console.log(pike);
+
+var seaTacAirport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
+console.log(seaTacAirport);
+
+var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
+console.log(seattleCenter);
+
+};
+
+=======
 
 };
 
@@ -217,3 +290,4 @@ console.dir('stores: ' + stores);
 =======
 console.log(pike);
 >>>>>>> Thursday-addingCSS
+>>>>>>> master
