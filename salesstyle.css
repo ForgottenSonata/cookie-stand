@@ -1,0 +1,40 @@
+* {
+  font-family: Cursive;
+}
+h1, h2, h3 {
+  font-family: inherit;
+  color: blue;
+}
+
+h1{
+  font-size: 56px;
+  text-align: center;
+}
+
+table {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+th, td {
+  border: .5px solid blue;
+  text-align: center;
+  
+}
+
+
+
+
+#store_form {
+  margin: 0 auto;
+}
+
+p {
+  background-color: #8888;
+  padding: 10px;
+}
+
+img {
+  margin: 0 auto;
+}
