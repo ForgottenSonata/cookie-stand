@@ -38,9 +38,9 @@ CookieStore.prototype.totalSalesPerLocation = function() {
   return this.total;
 };
 
-var storeTable = document.getElementById('store_table');
+var storeForm = document.getElementById('store_form');
 
-storeTable.addEventListener('submit', handleSubmit);
+storeForm.addEventListener('submit', handleSubmit);
 
 
 function handleSubmit(event) {
