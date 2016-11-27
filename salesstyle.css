@@ -25,11 +25,6 @@ th, td {
 
 
 
-
-#store_table {
-  margin: 0 auto;
-}
-
 p {
   background-color: #8888;
   padding: 10px;
@@ -37,4 +32,5 @@ p {
 
 img {
   margin: 0 auto;
+  display: inline-block;
 }
