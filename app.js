@@ -38,9 +38,9 @@ CookieStore.prototype.totalSalesPerLocation = function() {
   return this.total;
 };
 
-var storeForm = document.getElementById('store_form');
+var storeTable = document.getElementById('store_table');
 
-storeForm.addEventListener('submit', handleSubmit);
+storeTable.addEventListener('submit', handleSubmit);
 
 
 function handleSubmit(event) {
@@ -158,7 +158,4 @@ seattleCenter.toHtml();
 capitolHill.toHtml();
 alki.toHtml()
 
-console.log('randomHourlyCustomers: ' + alki.randomHourlyCustomers());
-console.log('cookiesPurchasedHourly: ' + alki.cookiesPurchasedHourly());
-console.log('totalSalesPerLocation: ' + alki.totalSalesPerLocation());
-console.log('cookieArray: ' + alki.cookieArray);
+
