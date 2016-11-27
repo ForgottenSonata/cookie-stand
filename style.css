@@ -1,0 +1,32 @@
+
+header {
+  font-family: Cursive;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+main {
+display: inline-block;
+
+}
+
+
+h1{
+  font- family: Arial;
+  font-size: 50px;
+}
+
+ul {
+  font-family: Arial;
+   font-size: 30px;
+margin: 0 auto;
+ float: left;
+ text: red;
+ border: solid black;
+}
