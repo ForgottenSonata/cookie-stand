@@ -99,6 +99,5 @@ console.log(seaTacAirport);
 var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
 console.log(seattleCenter);
 
-
 };
 
