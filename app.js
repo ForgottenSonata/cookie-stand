@@ -42,7 +42,7 @@ CookieStore.prototype.totalSalesPerLocation = function() {
 
 
 function renderHeaderRow () {
-  var storeTable = document.getElementById('store_table');
+  var storeTable = document.getElementById('table_header');
   var tableRow = document.createElement('tr');
   var blankTableHeader = document.createElement('th');
   var totalTableHeader = document.createElement('th');
